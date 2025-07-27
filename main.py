@@ -4,10 +4,11 @@ from array_creating import *
 from Math_operations import *
 from array_manipulations import *
 from slice_indexing_filtering import *
+from Graphical_representations import *
 
 while True :
     f = input(
-        "💡 what are the Functions do u want to do? \n 1 .Creating arrays[1D/2D/3D/4D] \n 2 .Math operations[Adding/Multiplication/DotProducts] \n 3. Array Manipulation \n 4 .Slicing, Indexing, Filtering \n 5 .View Created arrays \n 6. Exit \n\n enter the number : ")
+        "💡 what are the Functions do u want to do? \n 1 .Creating arrays[1D/2D/3D/4D] \n 2 .Math operations[Adding/Multiplication/DotProducts] \n 3. Array Manipulation \n 4 .Slicing, Indexing, Filtering \n 5 .View Created arrays \n 6 .Graphical Representation \n 7 .Exit \n\n enter the number : ")
     match f:
         case "1":
             while True:
@@ -76,6 +77,9 @@ while True :
             view_arrays()
 
         case "6":
+            charts()
+
+        case "7":
             break
 
 
