@@ -30,8 +30,7 @@ while True :
         case "2":
             created_arrays()
             while True:
-                cf = input(
-                    "What operation do you want to Perform : \n1. Adding \n2. Multiplication \n3. DotProducts \n4. Exit \n enter the number : ")
+                cf = input("What operation do you want to Perform : \n1. Adding \n2. Multiplication \n3. DotProducts \n4. Exit \n\n enter the number : ")
                 match cf:
                     case "1":
                         oneDadd()
@@ -39,8 +38,10 @@ while True :
                         arraymultiply()
                     case "3":
                         dotproduct()
-                    case "4":
+                    case "q":
                         break
+                    case _:
+                        print("Invalid input. Please enter 1, 2, 3 or 'q'. ")
                 
         case "3":
             created_arrays()
@@ -57,12 +58,13 @@ while True :
                         split_arrays()
                     case "5":
                         break
-
+                    case _:
+                        print("Invalid input. Please enter 1, 2, 3 or 'q'. ")
         case "4":
             created_arrays()
             while True:
                 cf = input(
-                    "What operation do you want to Perform : \n1. slicing \n2. indexing \n3. Filtering \n4. Exit")
+                    "What operation do you want to Perform : \n1. slicing \n2. indexing \n3. Filtering \n4. Exit \n\n enter the number : ")
                 match cf:
                     case "1":
                         slice_arrays()
@@ -81,6 +83,9 @@ while True :
 
         case "7":
             break
+
+        case _:
+            print("Invalid input. Please enter 1, 2, 3 , 4, 5, 6, 7")
 
 
 

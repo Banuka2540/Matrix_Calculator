@@ -5,31 +5,30 @@ from global_variables import *
 
 def reshape_arrays():
     nf = input("enter 2 to reshape 2D array : ")
-    try:
-        match int(nf):
-            case "2":
-                input_str1 = input("enter the name 2D array you want to reshape : ")
-                if input_str1 in arrays:
-                    input_str2 = int(input("enter the no of rows you want to reshape : "))
-                    input_str3 = int(input("enter the no of columns you want to reshape : "))
-                    x = arrays[input_str1].reshape(input_str2, input_str3)
-                    print(x)
-                else:
-                    print("Oops! No such array exists. Try again.")
-            case _:
-                print("Enter only 2 ")
-    except:
-        print("check the array names / array dimensions  again !! \n")
+    match int(nf):
+        case "2":
+            input_str1 = input("enter the name 2D array you want to reshape : ")
+            if input_str1 in arrays:
+                input_str2 = int(input("enter the no of rows you want to reshape : "))
+                input_str3 = int(input("enter the no of columns you want to reshape : "))
+                x = arrays[input_str1].reshape(input_str2, input_str3)
+                print(x)
+            else:
+                print("Oops! No such array exists. Try again.")
+        case _:
+            print("Enter only 2 ")
+
 
 
 
 
 def flattern_arrays():
-    input_str1 = input(str("enter the name 2D array you want to flatten : "))
-    if input_str1 in arrays:
-        print(arrays[input_str1].flatten())
-    else:
-        print("Oops! No such array exists. Try again.")
+        input_str1 = input(str("enter the name 2D array you want to flatten : "))
+        if input_str1 in arrays:
+            print(arrays[input_str1].flatten())
+        else:
+            print("Oops! No such array exists. Try again.")
+
 
 def  transpose_arrays():
     input_str1 = input(str("enter the name 2D array you want to transpose : "))

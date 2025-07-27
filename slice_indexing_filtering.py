@@ -55,8 +55,9 @@ def filtering_arrays():
     if getAr in ["1", "2"]:
         input_str1 = input("Enter the array name to filter: ")
         if input_str1 in arrays:
+            x = np.array(arrays[input_str1])
             condition = input("Enter filter condition using 'x' (e.g., x > 5): ")
-            x = arrays[input_str1]
+
             try:
                 result = x[eval(condition)]
                 print("Filtered Result:\n", result)

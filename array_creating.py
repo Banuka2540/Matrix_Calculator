@@ -1,16 +1,20 @@
 
 import numpy as np
 from global_variables import *
-##function regarding 1D arrays
+##creating 1D array
 def dim1():
     name = input("Give a name for the array: ")
     noElements = int(input("Enter number of elements: "))
     values = [int(x) for x in input(f"Enter values (space-separated): ").split()]
-    Arry1 = np.array(values)
-    arrays[name] = Arry1
-    print(f"\n{name} = {Arry1}\n")
+    if len(values) != noElements:
+        print("Oops! Number of elements doesn't match. Try again.")
 
-##function regarding 2D arrays
+    else:
+        Arry1 = np.array(values)
+        arrays[name] = Arry1
+        print(f"\n{name} = {Arry1}\n")
+
+##creating 2D array
 def dim2():
     name = input("Give a name for the array: ")
     rows2 = int(input("Number of rows: "))
@@ -30,7 +34,7 @@ def dim2():
     arrays[name] = Arry2
     print(f"\n{name} =\n{Arry2}\n")
 
-
+##creating 3D array
 def dim3():
     name = input("Give a name for the array: ")
     blocks = int(input("Enter number of blocks: "))
@@ -53,7 +57,7 @@ def dim3():
     arrays[name] = Array3
     print(f"\n{name} =\n{Array3}\n")
 
-
+##creating 4D array
 def dim4():
     name = input("Give a name for the 4D array: ")
     pages = int(input("Enter number of pages: "))
