@@ -7,17 +7,21 @@ from slice_indexing_filtering import *
 
 while True :
     f = input(
-        "💡 what are the Functions do u want to do? \n 1 .Creating arrays[1D/2D] \n 2 .Math operations[Adding/Multiplication/DotProducts] \n 3. Array Manipulation \n 4 .Slicing, Indexing, Filtering \n 5 .View Created arrays \n 6. Exit \n\n enter the number : ")
+        "💡 what are the Functions do u want to do? \n 1 .Creating arrays[1D/2D/3D/4D] \n 2 .Math operations[Adding/Multiplication/DotProducts] \n 3. Array Manipulation \n 4 .Slicing, Indexing, Filtering \n 5 .View Created arrays \n 6. Exit \n\n enter the number : ")
     match f:
         case "1":
             while True:
-                noofDim = input("Enter number of dimensions (1 or 2) or 'q' to quit: ")
+                noofDim = input("Enter number of dimensions (1 / 2 / 3 / 4 ) or 'q' to quit: ")
 
                 match noofDim:
                     case "1":
                         dim1()
                     case "2":
                         dim2()
+                    case "3":
+                        dim3()
+                    case "4":
+                        dim4()
                     case "q":
                         break
                     case _:
@@ -31,7 +35,7 @@ while True :
                     case "1":
                         oneDadd()
                     case "2":
-                        twoDadd()
+                        arraymultiply()
                     case "3":
                         dotproduct()
                     case "4":
