@@ -7,10 +7,13 @@ def oneDadd():
         print("--- only for 1D arrays ---")
         input_str1 = input(str("enter the first name of array you want to add : "))
         input_str2 = input(str("enter the second name of array you want to add : "))
-        sum = arrays[input_str1] + arrays[input_str2]
+        if arrays[input_str1].ndim !=1 or  arrays[input_str2].ndim !=1 :
+            raise ValueError("Please enter only 1D arrays.")
+        if arrays[input_str1].shape !=arrays[input_str2].shape :
+            raise ValueError("Arrays must have the same shape.")
         print("added array : ", sum)
-    except:
-        print("check the array names / array dimensions  again !! \n")
+    except Exception as e:
+        print(f"error {e}\n")
 
 #array multiply
 def arraymultiply():
@@ -18,6 +21,10 @@ def arraymultiply():
     try :
         input_str1 = input(str("enter the first name of array you want to multiply : "))
         input_str2 = input(str("enter the second name of array you want to multiply : "))
+        if arrays[input_str1].ndim != 1 or arrays[input_str2].ndim != 1:
+            raise ValueError("Please enter only 1D arrays.")
+        if arrays[input_str1].shape != arrays[input_str2].shape:
+            raise ValueError("Arrays must have the same shape.")
         multi = arrays[input_str1] * arrays[input_str2]
         print("multiplied array : " , multi)
     except:

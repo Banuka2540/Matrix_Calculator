@@ -1,6 +1,7 @@
 
 import numpy as np
 from global_variables import *
+
 ##creating 1D array
 def dim1():
     name = input("Give a name for the array: ")
@@ -17,14 +18,14 @@ def dim1():
 ##creating 2D array
 def dim2():
     name = input("Give a name for the array: ")
-    rows2 = int(input("Number of rows: "))
-    cols2 = int(input("Number of columns: "))
+    rows = int(input("Number of rows: "))
+    cols = int(input("Number of columns: "))
     values = []
 
-    for i in range(rows2):
+    for i in range(rows):
         while True:
             row = [int(x) for x in input(f"Enter row {i + 1} values (space-separated): ").split()]
-            if len(row) != cols2:
+            if len(row) != cols:
                 print("Oops! Number of elements doesn't match columns. Try again.")
             else:
                 values.append(row)

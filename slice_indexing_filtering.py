@@ -12,23 +12,23 @@ def slice_arrays():
             x = arrays[input_str1]
             y = x[input_str3:input_str4:input_str5]
             print(y)
-        elif getAr == "2":
-            input_str1 = input("Enter the name of the 2D array you want to slice: ")
-            if input_str1 in arrays:
-                try:
-                    row_start = int(input("Enter starting row index: "))
-                    row_end = int(input("Enter ending row index: "))
-                    col_start = int(input("Enter starting column index: "))
-                    col_end = int(input("Enter ending column index: "))
-                    x = arrays[input_str1]
-                    y = x[row_start:row_end, col_start:col_end]
-                    print("Sliced 2D array:\n", y)
-                except Exception as e:
-                    print("Error during slicing:", e)
-            else:
-                print("Oops! No such array exists. Try again.")
+    elif getAr == "2":
+        input_str1 = input("Enter the name of the 2D array you want to slice: ")
+        if input_str1 in arrays:
+            try:
+                row_start = int(input("Enter starting row index: "))
+                row_end = int(input("Enter ending row index: "))
+                col_start = int(input("Enter starting column index: "))
+                col_end = int(input("Enter ending column index: "))
+                x = arrays[input_str1]
+                y = x[row_start:row_end, col_start:col_end]
+                print("Sliced 2D array:\n", y)
+            except Exception as e:
+                print("Error during slicing:", e)
         else:
-            print("Invalid option. Press 1 or 2 only.")
+            print("Oops! No such array exists. Try again.")
+    else:
+        print("Invalid option. Press 1 or 2 only.")
 
 def indexing_arrays():
     getAr = input("to index 1D arrays press 1 and to index 2D arrays press 2 ")
