@@ -15,35 +15,6 @@ A modular, interactive NumPy-based command-line application for creating, manipu
 - 💥 Clean error handling using try/except  
 - 🧑‍💻 Perfect for learning or teaching NumPy interactively  
 
----
-
-## 🗂️ File Structure
-
-numpy-array-playground/
-├── main.py # Main interactive runner
-├── global_variables.py # Stores array dictionary and view functions
-├── array_creating.py # Functions to create 1D to 4D arrays
-├── Math_operations.py # Add, multiply, and dot product arrays
-├── array_manipulations.py # Reshape, flatten, transpose, split
-├── slice_indexing_filtering.py # Slice, index, and filter arrays
-├── Graphical_representations.py # Line, bar, histogram, pie chart plots
-
-
----
-
-## 📦 Requirements
-
-Make sure you have the following packages installed:
-
-```bash 
-pip install numpy matplotlib
-
-git clone https://github.com/your-username/numpy-array-playground.git
-cd numpy-array-playground
-
-python main.py
-
-
 
 
 
